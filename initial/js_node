@@ -1,0 +1,30 @@
+var MORSE = {'a': '.-',    'b': '-...',  'c': '-.-.',
+             'd': '-..',   'e': '.',     'f': '..-.',
+             'g': '--.',   'h': '....',  'i': '..',
+             'j': '.---',  'k': '-.-',   'l': '.-..',
+             'm': '--',    'n': '-.',    'o': '---',
+             'p': '.--.',  'q': '--.-',  'r': '.-.',
+             's': '...',   't': '-',     'u': '..-',
+             'v': '...-',  'w': '.--',   'x': '-..-',
+             'y': '-.--',  'z': '--..',  '0': '-----',
+             '1': '.----', '2': '..---', '3': '...--',
+             '4': '....-', '5': '.....', '6': '-....',
+             '7': '--...', '8': '---..', '9': '----.'
+            };
+
+function morseEncoder(text) {
+    // your code here
+    return text;
+}
+
+var assert = require('assert');
+if (!global.is_checking) {
+    console.log('Example:')
+    console.log(morseEncoder('some text'))
+
+    // These "asserts" are used for self-checking and not for an auto-testing
+    assert.equal(morseEncoder("some text"), "... --- -- .   - . -..- -")
+    assert.equal(morseEncoder("2018"), "..--- ----- .---- ---..")
+    assert.equal(morseEncoder("It was a good day"), ".. -   .-- .- ...   .-   --. --- --- -..   -.. .- -.--")
+    console.log("Coding complete? Click 'Check' to earn cool rewards!");
+}

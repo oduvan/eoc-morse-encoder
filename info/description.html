@@ -1,0 +1,52 @@
+<!-- Describe task in general -->
+
+<p>
+    Your task is to encrypt the text message using the <a href='https://en.wikipedia.org/wiki/Morse_code'>Morse code</a>. The input text will consist of letters (in uppercase and lowercase), numbers and whitespaces. There won't be any special characters ('&', '?', '#' etc.)<br>
+    You need to use 3 spaces between words and 1 space between each letter of each word.
+</p>
+
+<p style="text-align: center;">
+    <img  title="Morse encoder" src="{{MEDIA}}example.jpg" alt="example" style="max-height: 283px"/>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input: </strong> The secret message as a string.
+</p>
+
+<p>
+    <strong>Output: </strong> The same string, but encrypted.
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Example:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">morseEncoder("some text") == "... --- -- .   - . -..- -"
+morseEncoder("2018") == "..--- ----- .---- ---.."
+morseEncoder("It was a good day") == ".. -   .-- .- ...   .-   --. --- --- -..   -.. .- -.--"
+</pre>
+{% else %}
+<pre class="brush: python">morse_encoder("some text") == "... --- -- .   - . -..- -"
+morse_encoder("2018") == "..--- ----- .---- ---.."
+morse_encoder("It was a good day") == ".. -   .-- .- ...   .-   --. --- --- -..   -.. .- -.--"
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    For cryptography and spy work.
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>Precondition</strong>:<br>
+    0 < len(text) < 50<br>
+    Only English letters (in uppercase and lowercase), numbers and whitespaces.
+</p>

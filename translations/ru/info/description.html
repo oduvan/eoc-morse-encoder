@@ -1,0 +1,52 @@
+<!-- Describe task in general -->
+
+<p>
+    Ваша задача - зашифровать текстовое сообщение используя <a href='https://ru.wikipedia.org/wiki/%D0%90%D0%B7%D0%B1%D1%83%D0%BA%D0%B0_%D0%9C%D0%BE%D1%80%D0%B7%D0%B5'>азбуку Морзе</a>. Исходный текст будет состоять только из букв (в верхнем и нижнем регистре), чисел и пробелов. Специальные символы использоваться не будут ('&', '?', '#' и т.п.)<br>
+    Используйте 1 пробел между буквами одого слова и 3 пробела между отдельными словами.
+</p>
+
+<p style="text-align: center;">
+    <img  title="Morse encoder" src="{{MEDIA}}example.jpg" alt="example" style="max-height: 283px"/>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Входные данные: </strong> Секретное сообщение как строка
+</p>
+
+<p>
+    <strong>Выходные данные: </strong> Зашифрованный текст
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Примеры:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">morseEncoder("some text") == "... --- -- .   - . -..- -"
+morseEncoder("2018") == "..--- ----- .---- ---.."
+morseEncoder("It was a good day") == ".. -   .-- .- ...   .-   --. --- --- -..   -.. .- -.--"
+</pre>
+{% else %}
+<pre class="brush: python">morse_encoder("some text") == "... --- -- .   - . -..- -"
+morse_encoder("2018") == "..--- ----- .---- ---.."
+morse_encoder("It was a good day") == ".. -   .-- .- ...   .-   --. --- --- -..   -.. .- -.--"
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>Как это используется: </strong>
+    Для криптографии, передачи и защиты важной информации.
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>Предусловия</strong>:<br>
+    0 < len(text) < 50<br>
+    Текст будет содержать только буквы английского алфавита (в верхнем и нижнем регистре), числа и пробелы.
+</p>
